@@ -1,0 +1,80 @@
+name: Vite Bootstrap CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+env:
+  CI: true
+  NODE_ENV: test
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Uses Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Get yarn cache
+        uses: actions/cache@v2
+        with:
+          path: .yarn/cache
+          key: ${{ runner.os }}-yarn-v0-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-v0-cache-
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Update browserslist db
+        run: npx browserslist@latest --update-db
+
+      - name: EsLint
+        run: yarn run lint
+
+      - name: Type validation
+        run: yarn run type
+
+      - name: Jest
+        run: yarn run jest --collectCoverage
+
+      - name: Build
+        run: yarn build
+        env:
+          NODE_ENV: production
+
+# CYPRESS
+      - name: Start Nginx
+        run: |
+          export DUD_MY_PATH=`pwd`
+          docker run -it --rm -d -p 3000:80 --name web -v $DUD_MY_PATH/dist:/usr/share/nginx/html nginx
+
+      - name: Setup and Run Cypress
+        uses: cypress-io/github-action@v2
+        env:
+          CYPRESS_FORCE_NEW_TOKEN: false
+        with:
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 60
+          spec: |
+            cypress/integration/test.spec.ts
+          install: false
+          browser: chrome
+          headless: true
+
+      - name: Cypress Artifacts
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: Cypress Artifacts
+          path: |
+            cypress/integration/__image_snapshots__

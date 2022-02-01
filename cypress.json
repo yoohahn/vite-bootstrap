@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "videoUploadOnPasses": false,
+  "videoCompression": 15,
+  "chromeWebSecurity": false,
+  "ignoreTestFiles": [
+    "**/__snapshots__/*",
+    "**/__image_snapshots__/*"
+  ],
+  "env": {}
+}
