@@ -56,14 +56,14 @@ jobs:
       - name: Start Nginx
         run: |
           export DUD_MY_PATH=`pwd`
-          docker run -it --rm -d -p 3000:80 --name web -v $DUD_MY_PATH/dist:/usr/share/nginx/html nginx
+          docker run -it --rm -d -p 3433:80 --name web -v $DUD_MY_PATH/dist:/usr/share/nginx/html nginx
 
       - name: Setup and Run Cypress
         uses: cypress-io/github-action@v2
         env:
           CYPRESS_FORCE_NEW_TOKEN: false
         with:
-          wait-on: "http://localhost:3000"
+          wait-on: "http://localhost:3433"
           wait-on-timeout: 60
           spec: |
             cypress/integration/test.spec.ts
