@@ -1,8 +1,8 @@
 {
-  "name": "vite-test",
+  "name": "vite-bootstrap",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3433",
     "build": "tsc -p tsconfig.prod.json && vite build",
     "preview": "vite preview",
     "type": "echo \"Running Type check\" ; tsc -p tsconfig.prod.json --noEmit --resolveJsonModule",
@@ -26,7 +26,6 @@
     "@babel/preset-env": "7.16.11",
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
-    "@emotion/babel-plugin": "11.7.2",
     "@emotion/babel-preset-css-prop": "11.2.0",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.1.2",

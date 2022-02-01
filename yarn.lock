@@ -1491,7 +1491,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:11.7.2, @emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.3.0":
+"@emotion/babel-plugin@npm:^11.2.0, @emotion/babel-plugin@npm:^11.3.0":
   version: 11.7.2
   resolution: "@emotion/babel-plugin@npm:11.7.2"
   dependencies:
@@ -8445,16 +8445,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-test@workspace:.":
+"vite-bootstrap@workspace:.":
   version: 0.0.0-use.local
-  resolution: "vite-test@workspace:."
+  resolution: "vite-bootstrap@workspace:."
   dependencies:
     "@babel/core": 7.16.10
     "@babel/plugin-transform-runtime": 7.16.10
     "@babel/preset-env": 7.16.11
     "@babel/preset-react": 7.16.7
     "@babel/preset-typescript": 7.16.7
-    "@emotion/babel-plugin": 11.7.2
     "@emotion/babel-preset-css-prop": 11.2.0
     "@emotion/react": 11.7.1
     "@emotion/styled": 11.6.0
