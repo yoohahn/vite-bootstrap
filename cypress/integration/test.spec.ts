@@ -7,6 +7,6 @@ describe("Simple test", () => {
     getBtn().should("be.visible");
     getBtn().should("have.text", "count is: 0");
     getBtn().click();
-    getBtn().should("have.text", "count is: 2");
+    getBtn().should("have.text", "count is: 1");
   });
 });

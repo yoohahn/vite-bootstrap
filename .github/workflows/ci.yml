@@ -77,4 +77,5 @@ jobs:
         with:
           name: Cypress Artifacts
           path: |
-            cypress/integration/__image_snapshots__
+            cypress/screenshots
+            cypress/videos
