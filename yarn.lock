@@ -8593,13 +8593,13 @@ __metadata:
     react-dom: 17.0.2
     react-router-dom: 6.2.1
     typescript: 4.5.5
-    vite: 2.8.1
+    vite: 2.8.6
   languageName: unknown
   linkType: soft
 
-"vite@npm:2.8.1":
-  version: 2.8.1
-  resolution: "vite@npm:2.8.1"
+"vite@npm:2.8.6":
+  version: 2.8.6
+  resolution: "vite@npm:2.8.6"
   dependencies:
     esbuild: ^0.14.14
     fsevents: ~2.3.2
@@ -8622,7 +8622,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 4ce8acc2dd2a7ca8727511ff575f72de162114402e55e5d081001f05ef1656782cd5611d4f6091c29efb455e72d30967467bad5b6b329bfe5279fbe8d5169d67
+  checksum: 4b02d133892c98362c10214b7ad518d74b59745889197a2ba0b63260ed083fcef75a447e8fb58dbd2af8747386274b36017983d93031254df6ead38701950dcc
   languageName: node
   linkType: hard
 
