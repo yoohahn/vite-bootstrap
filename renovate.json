@@ -4,6 +4,7 @@
   ],
   "packageRules": [
     {
+      "matchDepTypes": ["dependencies", "devDependencies"],
       "automerge": true,
       "automergeType": "branch"
     }
