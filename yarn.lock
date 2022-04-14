@@ -30,7 +30,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.9":
+"@babel/core@npm:7.17.9, @babel/core@npm:^7.17.9":
   version: 7.17.9
   resolution: "@babel/core@npm:7.17.9"
   dependencies:
@@ -73,29 +73,6 @@ __metadata:
     json5: ^2.1.2
     semver: ^6.3.0
   checksum: 467838313f8c84037d08d051238005c48f6b3da6fbaed38cd2dac5fcbe3706df2857365b8a9291402b3b888c24edb9707dc6c93f0127fecc7fe49b700c35c057
-  languageName: node
-  linkType: hard
-
-"@babel/core@npm:^7.17.8":
-  version: 7.17.8
-  resolution: "@babel/core@npm:7.17.8"
-  dependencies:
-    "@ampproject/remapping": ^2.1.0
-    "@babel/code-frame": ^7.16.7
-    "@babel/generator": ^7.17.7
-    "@babel/helper-compilation-targets": ^7.17.7
-    "@babel/helper-module-transforms": ^7.17.7
-    "@babel/helpers": ^7.17.8
-    "@babel/parser": ^7.17.8
-    "@babel/template": ^7.16.7
-    "@babel/traverse": ^7.17.3
-    "@babel/types": ^7.17.0
-    convert-source-map: ^1.7.0
-    debug: ^4.1.0
-    gensync: ^1.0.0-beta.2
-    json5: ^2.1.2
-    semver: ^6.3.0
-  checksum: 0e686b1be444d25494424065238931f2b3df908bf072b72bab973acfd6d27a481fc280c9cd8a3c6fe2c46beee50e0d2307468d8b15b64dc4036f025e75f6609d
   languageName: node
   linkType: hard
 
@@ -396,17 +373,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helpers@npm:^7.17.8":
-  version: 7.17.8
-  resolution: "@babel/helpers@npm:7.17.8"
-  dependencies:
-    "@babel/template": ^7.16.7
-    "@babel/traverse": ^7.17.3
-    "@babel/types": ^7.17.0
-  checksum: 463dad58119fefebf2d0201bfa53ec9607aa00356908895640fc07589747fb3c2e0dfee4019f3e8c9781e57c9aa5dff4c72ec8d1b031c4ed8349f90b6aefe99d
-  languageName: node
-  linkType: hard
-
 "@babel/helpers@npm:^7.17.9":
   version: 7.17.9
   resolution: "@babel/helpers@npm:7.17.9"
@@ -435,15 +401,6 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: d2612c2597838a605bcbe921fd2c7381b3ab75603c7907020df037c22a3d27f0507285da74553cd75f403300ca76642323ca2e72ba55cc4222d4a20b87505b0c
-  languageName: node
-  linkType: hard
-
-"@babel/parser@npm:^7.17.8":
-  version: 7.17.8
-  resolution: "@babel/parser@npm:7.17.8"
-  bin:
-    parser: ./bin/babel-parser.js
-  checksum: 1771808491982cc47baa888a997aef6b58308e3844c8c00f730f8fd97defe57d32cdbf46075cd49aaee310fa31f3d2c80a0d41b41a4ee0ff336ee09e2ff6c222
   languageName: node
   linkType: hard
 
@@ -2799,19 +2756,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@vitejs/plugin-react@npm:1.3.0"
+"@vitejs/plugin-react@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@vitejs/plugin-react@npm:1.3.1"
   dependencies:
-    "@babel/core": ^7.17.8
+    "@babel/core": ^7.17.9
     "@babel/plugin-transform-react-jsx": ^7.17.3
     "@babel/plugin-transform-react-jsx-development": ^7.16.7
     "@babel/plugin-transform-react-jsx-self": ^7.16.7
     "@babel/plugin-transform-react-jsx-source": ^7.16.7
     "@rollup/pluginutils": ^4.2.0
-    react-refresh: ^0.11.0
+    react-refresh: ^0.12.0
     resolve: ^1.22.0
-  checksum: 3af715b223f3115b271135909f372cd17d1d14a0c756d4b09df9d8ce3cc032e7f7fcb1c056becc62998a4c262c91aa7d6058ff496513c3c98852d1e6f9fd3c0e
+  checksum: 2d71677ec14b62589fd411bc9c76a0eba48469d06cf7b29106f0fae265bc386aeeb3071215d6a95f561a26c30a8bab8f523eedaabe7fe5f91b27d6317897bd47
   languageName: node
   linkType: hard
 
@@ -7495,10 +7452,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-refresh@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "react-refresh@npm:0.11.0"
-  checksum: 112178a05b1e0ffeaf5d9fb4e56b4410a34a73adeb04dbf13abdc50d9ac9df2ada83e81485156cca0b3fa296aa3612751b3d6cd13be4464642a43679b819cbc7
+"react-refresh@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "react-refresh@npm:0.12.0"
+  checksum: 046522ed9e26c2846afb734303d9461a825a96f863ea373b9296a90e7112e1602bdf5954d8b48193e763f3ff0108f2e4c00e42f0e3d45382bb9d38dc87348867
   languageName: node
   linkType: hard
 
@@ -8664,7 +8621,7 @@ __metadata:
     "@types/react-dom": 18.0.0
     "@typescript-eslint/eslint-plugin": 5.19.0
     "@typescript-eslint/parser": 5.19.0
-    "@vitejs/plugin-react": 1.3.0
+    "@vitejs/plugin-react": 1.3.1
     babel-jest: 27.5.1
     clsx: 1.1.1
     cypress: 9.5.4
