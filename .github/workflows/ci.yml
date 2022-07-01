@@ -52,14 +52,14 @@ jobs:
         env:
           NODE_ENV: production
 
-# CYPRESS
+      # CYPRESS
       - name: Start Nginx
         run: |
           export DUD_MY_PATH=`pwd`
           docker run -it --rm -d -p 3433:80 --name web -v $DUD_MY_PATH/dist:/usr/share/nginx/html nginx
 
       - name: Setup and Run Cypress
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         env:
           CYPRESS_FORCE_NEW_TOKEN: false
         with:
@@ -69,7 +69,6 @@ jobs:
             cypress/integration/test.spec.ts
           install: false
           browser: chrome
-          headless: true
 
       - name: Cypress Artifacts
         uses: actions/upload-artifact@v3
