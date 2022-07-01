@@ -66,7 +66,7 @@ jobs:
           wait-on: "http://localhost:3433"
           wait-on-timeout: 60
           spec: |
-            cypress/integration/test.spec.ts
+            cypress/e2e/test.cy.ts
           install: false
           browser: chrome
 
