@@ -40,6 +40,7 @@ module.exports = {
     ],
     "import/no-unresolved": IGNORE,
     // @TYPESCRIPTS
+    "@typescript-eslint/consistent-type-imports": ERROR,
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ERROR,
     // Consider enabeling ignored rules?

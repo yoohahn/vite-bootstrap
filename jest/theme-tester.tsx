@@ -2,7 +2,8 @@ import * as React from "react";
 import "@testing-library/jest-dom";
 import { ThemeProvider as MuiThemeProvider, createTheme, StyledEngineProvider } from "@mui/material/styles";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
-import { render, RenderOptions } from "@testing-library/react";
+import type { RenderOptions } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
