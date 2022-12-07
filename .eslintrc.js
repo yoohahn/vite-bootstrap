@@ -27,6 +27,7 @@ module.exports = {
     "plugin:storybook/recommended",
   ],
   rules: {
+    "react/no-unknown-property": [ERROR, { ignore: ["css"] }],
     "react/display-name": IGNORE,
     "react/jsx-uses-react": IGNORE,
     "react/react-in-jsx-scope": IGNORE,
