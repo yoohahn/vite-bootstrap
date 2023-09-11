@@ -17,49 +17,47 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Uses Node.js 16.x
+      - name: Cache
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Uses Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
-
-      - name: Get yarn cache
-        uses: actions/cache@v3
-        with:
-          path: .yarn/cache
-          key: ${{ runner.os }}-yarn-v0-cache-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-v0-cache-
+          node-version: "18"
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: yarn install --immutable
-
-      - name: Update browserslist db
-        run: npx browserslist@latest --update-db
+        run: |
+          pnpm install
+          pnpm run cy:i
+          npx browserslist@latest --update-db
 
       - name: EsLint
-        run: yarn run lint
+        run: pnpm run lint
 
       - name: Type validation
-        run: yarn run type
+        run: pnpm run type
 
       - name: Jest
-        run: yarn run jest --collectCoverage
+        run: pnpm run jest --collectCoverage
 
       - name: Build
-        run: yarn build
+        run: pnpm build
         env:
           NODE_ENV: production
 
       # CYPRESS
       - name: Start Nginx
         run: |
-          export DUD_MY_PATH=`pwd`
-          docker run -it --rm -d -p 3433:80 --name web -v $DUD_MY_PATH/dist:/usr/share/nginx/html nginx
+          export ABSOLUTE_PATH=`pwd`
+          docker run -it --rm -d -p 3433:80 --name web -v $ABSOLUTE_PATH/dist:/usr/share/nginx/html nginx
 
       - name: Setup and Run Cypress
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         env:
           CYPRESS_FORCE_NEW_TOKEN: false
         with:
