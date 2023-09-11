@@ -1,14 +1,12 @@
-### Read more: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+package-lock.json
+yarn.lock
 .yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+.yarn*
 node_modules
 dist
 *.local
 .eslintcache
+coverage
 #cypress
 cypress/screenshots
 cypress/videos

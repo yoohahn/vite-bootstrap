@@ -2,7 +2,7 @@
 
 Bootstraps:
 
-- Yarn v3
+- Pnpm
 - React
   - Material UI v5
   - EmotionJS
