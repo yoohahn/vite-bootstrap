@@ -17,8 +17,10 @@
     "noImplicitAny": true,
     "jsx": "react-jsxdev",
     "jsxImportSource": "@emotion/react",
+    "baseUrl": ".",
+    "types": ["vitest/globals"],
     "paths": {
-      "@local-test-util": ["./jest/"]
+      "@local-test-util": ["tests"]
     }
   },
   "include": ["./src", "./cypress"]

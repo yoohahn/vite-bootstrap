@@ -6,8 +6,6 @@ import type { RenderOptions } from "@testing-library/react";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-
 const WithProvider = ({ children }: { children: React.ReactNode }) => {
   const theme = createTheme();
   return (
