@@ -10,5 +10,5 @@ Bootstraps:
 - TypeScript
 - Vite
 - EsLint
-- Jest
+- Vitest
 - Cypress
