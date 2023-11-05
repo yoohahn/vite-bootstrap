@@ -42,8 +42,8 @@ jobs:
       - name: Type validation
         run: pnpm run type
 
-      - name: Jest
-        run: pnpm run jest --collectCoverage
+      - name: Test
+        run: pnpm run test:ci --coverage
 
       - name: Build
         run: pnpm build

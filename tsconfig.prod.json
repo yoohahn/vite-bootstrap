@@ -4,5 +4,5 @@
     "jsx": "react-jsx",
     "paths": {}
   },
-  "exclude": ["node_modules", "dist", "cypress", "**/__tests__"]
+  "exclude": ["node_modules", "dist", "cypress", "**/__tests__", "tests"]
 }

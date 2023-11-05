@@ -14,7 +14,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ["@typescript-eslint", "jsx-a11y", "react", "react-hooks", "jest", "prettier"],
+  plugins: ["@typescript-eslint", "jsx-a11y", "react", "react-hooks", "prettier"],
   extends: [
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -74,7 +74,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.mock.*", "**/*.spec.*", "**/*.d.ts", "**/jest/theme-tester.tsx"],
+      files: ["**/*.mock.*", "**/*.spec.*", "**/*.d.ts", "**/tests/theme-tester.tsx"],
       rules: {
         "@typescript-eslint/camelcase": IGNORE,
         "@typescript-eslint/ban-ts-comment": IGNORE,
@@ -98,18 +98,6 @@ module.exports = {
         "react-hooks/exhaustive-deps": WARNING,
         "react/no-unescaped-entities": IGNORE,
         "react/jsx-one-expression-per-line": IGNORE, // This rule colides with prettier. So ignore it
-      },
-    },
-    {
-      files: ["**/*.spec.tsx"],
-      extends: ["plugin:jest/recommended"],
-      env: {
-        browser: true,
-        jest: true,
-      },
-      rules: {
-        "no-shadow": 0,
-        "react-hooks/exhaustive-deps": IGNORE,
       },
     },
   ],
