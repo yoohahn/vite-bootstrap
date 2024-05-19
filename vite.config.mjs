@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 import { compilerOptions } from "./tsconfig.json";
 
 const alias = Object.entries(compilerOptions.paths).reduce((acc, [key, [value]]) => {
@@ -20,7 +20,7 @@ export default defineConfig({
   ],
   test: {
     globals: true,
-    environment: "jsdom",
+    environment: "happy-dom",
     setupFiles: "./tests/setup.ts",
     coverage: {
       provider: "istanbul", // or 'v8'
