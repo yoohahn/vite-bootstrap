@@ -71,7 +71,7 @@ importers:
         version: 7.18.0(eslint@8.57.1)(typescript@5.7.2)
       '@vitejs/plugin-react-swc':
         specifier: 3.7.2
-        version: 3.7.2(vite@6.0.3(@types/node@20.6.0))
+        version: 3.7.2(vite@6.0.5(@types/node@20.6.0))
       '@vitest/coverage-istanbul':
         specifier: 2.1.8
         version: 2.1.8(vitest@2.1.8(@types/node@20.6.0)(happy-dom@15.11.7))
@@ -112,8 +112,8 @@ importers:
         specifier: 5.7.2
         version: 5.7.2
       vite:
-        specifier: 6.0.3
-        version: 6.0.3(@types/node@20.6.0)
+        specifier: 6.0.5
+        version: 6.0.5(@types/node@20.6.0)
       vitest:
         specifier: 2.1.8
         version: 2.1.8(@types/node@20.6.0)(happy-dom@15.11.7)
@@ -3540,8 +3540,8 @@ packages:
       terser:
         optional: true
 
-  vite@6.0.3:
-    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
+  vite@6.0.5:
+    resolution: {integrity: sha512-akD5IAH/ID5imgue2DYhzsEwCi0/4VKY31uhMLEYJwPP4TiUp8pL5PIK+Wo7H8qT8JY9i+pVfPydcFPYD1EL7g==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -5246,10 +5246,10 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react-swc@3.7.2(vite@6.0.3(@types/node@20.6.0))':
+  '@vitejs/plugin-react-swc@3.7.2(vite@6.0.5(@types/node@20.6.0))':
     dependencies:
       '@swc/core': 1.7.26
-      vite: 6.0.3(@types/node@20.6.0)
+      vite: 6.0.5(@types/node@20.6.0)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -7455,7 +7455,7 @@ snapshots:
       '@types/node': 20.6.0
       fsevents: 2.3.3
 
-  vite@6.0.3(@types/node@20.6.0):
+  vite@6.0.5(@types/node@20.6.0):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
