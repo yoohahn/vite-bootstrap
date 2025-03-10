@@ -74,7 +74,7 @@ importers:
         version: 3.8.0(vite@6.2.1(@types/node@20.6.0))
       '@vitest/coverage-istanbul':
         specifier: 3.0.8
-        version: 3.0.8(vitest@3.0.8(@types/node@20.6.0)(happy-dom@17.2.2))
+        version: 3.0.8(vitest@3.0.8(@types/node@20.6.0)(happy-dom@17.4.3))
       cypress:
         specifier: 14.1.0
         version: 14.1.0
@@ -103,8 +103,8 @@ importers:
         specifier: 0.11.4
         version: 0.11.4(eslint@8.57.1)(typescript@5.8.2)
       happy-dom:
-        specifier: 17.2.2
-        version: 17.2.2
+        specifier: 17.4.3
+        version: 17.4.3
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -116,7 +116,7 @@ importers:
         version: 6.2.1(@types/node@20.6.0)
       vitest:
         specifier: 3.0.8
-        version: 3.0.8(@types/node@20.6.0)(happy-dom@17.2.2)
+        version: 3.0.8(@types/node@20.6.0)(happy-dom@17.4.3)
 
 packages:
 
@@ -2374,8 +2374,8 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  happy-dom@17.2.2:
-    resolution: {integrity: sha512-3I1/CrNi780sdOhuhUnFtgTWhloSc3quSZwsylI41jycx8o97M6Y4aQAu0phSexGusT7+59BxATh4L4xiY0HcA==}
+  happy-dom@17.4.3:
+    resolution: {integrity: sha512-8mDGIKxi2hAg0DkEYjBHPi5QykWiqdNNQQWrwLXLfro1eAZk8+lSnzbUrnU25bamG9PjEQGoFrA32ezQNJQdww==}
     engines: {node: '>=18.0.0'}
 
   has-bigints@1.0.2:
@@ -5218,7 +5218,7 @@ snapshots:
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  '@vitest/coverage-istanbul@3.0.8(vitest@3.0.8(@types/node@20.6.0)(happy-dom@17.2.2))':
+  '@vitest/coverage-istanbul@3.0.8(vitest@3.0.8(@types/node@20.6.0)(happy-dom@17.4.3))':
     dependencies:
       '@istanbuljs/schema': 0.1.3
       debug: 4.4.0(supports-color@8.1.1)
@@ -5230,7 +5230,7 @@ snapshots:
       magicast: 0.3.5
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.0.8(@types/node@20.6.0)(happy-dom@17.2.2)
+      vitest: 3.0.8(@types/node@20.6.0)(happy-dom@17.4.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -6453,7 +6453,7 @@ snapshots:
 
   graphemer@1.4.0: {}
 
-  happy-dom@17.2.2:
+  happy-dom@17.4.3:
     dependencies:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
@@ -7742,7 +7742,7 @@ snapshots:
       '@types/node': 20.6.0
       fsevents: 2.3.3
 
-  vitest@3.0.8(@types/node@20.6.0)(happy-dom@17.2.2):
+  vitest@3.0.8(@types/node@20.6.0)(happy-dom@17.4.3):
     dependencies:
       '@vitest/expect': 3.0.8
       '@vitest/mocker': 3.0.8(vite@6.2.1(@types/node@20.6.0))
@@ -7766,7 +7766,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.6.0
-      happy-dom: 17.2.2
+      happy-dom: 17.4.3
     transitivePeerDependencies:
       - jiti
       - less
