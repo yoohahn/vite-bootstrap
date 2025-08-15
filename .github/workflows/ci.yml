@@ -22,7 +22,7 @@ jobs:
       - name: Cache
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10
 
       - name: Uses Node.js 22
         uses: actions/setup-node@v4
