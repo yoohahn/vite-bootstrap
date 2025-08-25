@@ -39,7 +39,7 @@
     "@vitejs/plugin-react-swc": "4.0.1",
     "@vitest/coverage-istanbul": "3.2.4",
     "cypress": "15.0.0",
-    "eslint": "8.57.1",
+    "eslint": "9.34.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
